@@ -56,3 +56,9 @@ ServeHTTP(http.ResponseWriter, *http.Request)
 
 
 ![GET](https://github.com/pyhblacksky/GoCache/blob/master/doc/get.PNG)
+
+------
+
+## 对比(和Redis)
+目前只是简单实现了缓存功能，数据存储在内存中，且不支持持久化存储，服务器down掉数据就没了
+此外，性能只有redis的1/4左右，主要原因在于REST协议的解析上，REST基于HTTP，HTTP基于TCP，而redis是直接建立在TCP上的。
